@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity.LoginActivity" >
+    <!--#7adfb8-->
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_title"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_title"
+        android:layout_marginTop="97dp">
+
+        <include
+            android:id="@+id/input_layout"
+            layout="@layout/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/login"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="36dp" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--记住密码-->
+            <CheckBox
+                android:id="@+id/login_remember"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:checked="false"
+                android:textColor="@android:color/black"
+                android:text="记住密码"
+                android:textSize="15sp" />
+
+            <!--自动登录-->
+            <CheckBox
+                android:id="@+id/login_auto"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:checked="false"
+                android:text="自动登陆"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_progress"
+            layout="@layout/layout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53dp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/login"
+            layout="@layout/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="130dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/main_btn_forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:gravity="center"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="2dip"
+            android:text="忘记密码"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_below="@+id/main_title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/logo2_1" />
+
+    <TextView
+        android:id="@+id/visitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="游客登陆"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true" />
+
+
+</RelativeLayout>
